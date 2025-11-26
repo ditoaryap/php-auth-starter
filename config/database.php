@@ -1,19 +1,15 @@
 <?php
 
-$servername = "localhost";
+$dsn = "mysql:host=localhost;dbname=db_auth_starter";
 $username = "root";
 $password = "";
-$port = 3306;
-$dbname = "db_login_register";
 
-$conn = mysqli_connect($servername, $username, $password, $$dbname, $port);
-
-if(!$conn) {
-    die("Sever failed connect:".mysqli_connect_error());
+try {
+    $dbh = new PDO($dsn, $username, $password);
+    echo "Connection Successfull!";
+} catch (PDOException $e) {
+    echo "Error!: ". $e->getMessage()."</br>";
+    die();
 }
-
-echo "Connected Successfully";
-
-mysqli_close($conn);
 
 ?>
