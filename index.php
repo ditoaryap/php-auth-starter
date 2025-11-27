@@ -1,5 +1,9 @@
 <?php
-    $page = $_GET["page"] ?? "login";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$page = $_GET["page"] ?? "login";
+
 ?>
 
 <!DOCTYPE html>
@@ -11,13 +15,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php 
-        if($page === "login"){
-            include "views/loginForm.php";
-        } elseif ($page === "register") {
-            include "views/registerForm.php";
-        }
-    ?>
-    
+
+<?php 
+    if ($page === "login") {
+        include "views/loginForm.php";
+    } elseif ($page === "register") {
+        include "views/registerForm.php";
+    } else {
+        include "views/loginForm.php";
+    }
+?>
+
 </body>
 </html>
