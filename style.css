@@ -130,10 +130,33 @@ button:hover {
   /* padding: 20px; */
 }
 
-.admin-page span {
+.user-page {
+  background-color: var(--secondary);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* min-height: 100vh; */
+  /* padding: 20px; */
+}
+
+.admin-page input{
+    background: #f9acacff;
+}
+
+.admin-page input:hover,
+.user-page input:hover {
+    box-shadow: 4px 4px 0px var(--primary);
+}
+
+.admin-page span,
+.user-page span {
     color: #7A9FEC;
 }
 
-.admin-page button {
-    background: #e61414ff;
+.user-page input {
+    background: red !important;
 }
+
+
+
